@@ -8,6 +8,12 @@ from . import views
 
 urlpatterns = [
     path('',views.index),
-    path('dashboard',views.dashboard)
-    
+    path('register',views.register),
+    path('login',views.login),
+    path('homepage',views.home),
+    path('setgoal',views.setgoal),
+    path('editgoal',views.editgoal),
+    path('viewgoals',views.goals),
+    path('editprofile',views.editprofile),
+    path('logout',views.logout)
 ]

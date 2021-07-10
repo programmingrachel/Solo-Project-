@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import RegisterForm, LoginForm
+from .forms import GoalForm, RegisterForm, LoginForm, GoalForm
 
 
 def index(request):
@@ -31,7 +31,12 @@ def home(request):
         return render(request, "home.html")
 
 def setgoal(request):
-    return render(request,"setgoal.html" )
+    form = GoalForm
+    context= {
+        "goalForm": form
+    }
+
+    return render(request,"setgoal.html",context)
 
 def editgoal(request):
     return render(request,"edit.html" )

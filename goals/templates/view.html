@@ -1,1 +1,41 @@
-display all goals from user here
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal</title>
+</head>
+<body>
+    <div>
+        <h1>Hey {user}, here are your goals for 2021</h1>
+        <a href="/logout">Logout</a>
+        <a href="/homepage">Back</a>
+        <!-- <a href="/setgoal">Set a new Goal</a> -->
+    </div>
+    <div>
+        <h4>Goals for 2021</h4>
+        <div>
+            <ul>
+                <li>Goal</li>
+                <li>{loop through and display single goal}</li>
+                <li>Why is this Goal important to you?</li>
+                <li>{loop through and display single goals why}</li>
+                <li>Short term goal</li>
+                <li>{loop through to display short term goal</li>
+            </ul>
+            <p>start date </p>insert calender here <p>Target Date insert calender here</p>
+        </div>
+        <a href="/editgoal">Edit this Goal</a>
+        <a href="/setgoal"> Set a new goal</a>
+    </div>
+    <div>
+        <h1>Way to go! You are making Progress!</h1>
+        <p>Here are a list of tasks you have completed in the last 30 days to get that goal</p>
+        <div>
+            {loop through all tasks to display here}
+        </div>
+    </div>
+    
+</body>
+</html>

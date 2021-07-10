@@ -9,18 +9,25 @@
 </head>
 
 <body>
-
+    <div>
+        <h1>Welcome to Goal Getter!!! Login to Set Goals</h1>
+    </div>
+    <div>
+        <h3>Register Here</h3>
         <form class="" action="/register" method="post">
             {% csrf_token %}
             {{ regForm.as_p }}
             <input type="submit" value="register">
         </form>
+    </div>
+    <div>
+        <h3>Login</h3>
         <form class="" action="/login" method="post">
             {% csrf_token %}
             {{ loginForm.as_p }}
-            <input type="submit" value="register">
+            <input type="submit" value="Log in">
         </form>
-
+    </div>
 
 </body>
 

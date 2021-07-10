@@ -1,1 +1,34 @@
-Here we will have a form so we can update or delete goals
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit goals</title>
+</head>
+<body>
+    <div>
+        <h1>Edit your goal</h1>
+        <a href="/homepage">Home</a> 
+        <a href="/logout">Logout</a>
+    </div>
+    
+    <form action="/editgoal" method="POST">
+        {% csrf_token %}
+        <div class=" form-group">
+            <label for="goal">I wish for</label>
+            <input type="text" name="goal" value="">
+            <label for="why">Why is this goal important to you</label>
+            <input type="text" name="why" value="">
+            <label for="short">What is your short term goal?</label>
+            <input type="text" name="short" value="">
+            <label for="starttime">Start Date</label>
+            <input type="date" name="starttime" id="">
+            <label for="target_date">Target Date</label>
+            <input type="date" name="target_date" id="">
+        <button class="btn btn-primary">Delete</button>
+        <button class="btn btn-primary">Save</button>
+
+        </div>
+    </form>
+    <div>

@@ -1,1 +1,23 @@
-Here we will have a form to edit profile
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+
+<body>
+    <div>
+    </div>
+    <div>
+        <h3>Edit your information</h3>
+        <a href="/homepage">Home</a> 
+        <a href="/logout">Logout</a>
+        <form class="" action="/updateprofile" method="post">
+            {% csrf_token %}
+            {{ regForm.as_p }} create a new form to update profile info but this is extra
+            <input type="submit" value="Update info">
+        </form>
+    </div>

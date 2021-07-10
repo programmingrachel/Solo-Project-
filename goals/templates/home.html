@@ -12,30 +12,48 @@
     <div>
         <h1>Welcome User</h1>
         <a href="/logout">Logout</a>
+        <form action="/editprofile">
+            {% csrf_token %}
+        <button>profile head</button>
+        </form>
     </div>
     <div>
         <h3>Goals for 2021</h3>
-        <!-- <h3>Daily tasks</h3> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Goal</th>
+                    <th>Start Date</th>
+                    <th>Goal Date</th>
+                    <th>Update Goal Status </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Goal listed here</td>
+                    <td>Start Date</td>
+                    <td>Goal Date</td>
+                    <td><a href="/viewgoals">View</a> <a href="/editgoal">Edit</a> <a href="">tasks</a> <a
+                            href="">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Goal</th>
-                <th>Start Date</th>
-                <th>Goal Date</th>
-                <th>Update Goal Status </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Goal listed here</td>
-                <td>Start Date</td>
-                <td>Goal Date</td>
-                <td><a href="/viewgoals">View</a> <a href="/editgoal">Edit</a> <a href="">tasks</a> <a href="">Delete</a></td>
-            </tr>
-        </tbody>
-    </table>
     <a href="/setgoal">Add a new goal</a> <a href="/viewgoals">View your goals</a>
+    <div>
+        <h3>Daily tasks</h3>
+        <ul>
+            <li><div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="" id="" value="checkedValue"> insert task form
+                </label>
+                <!-- Probably need to come back and adjust how this is set up -->
+            </div></li>
+        </ul>
+
+
+    </div>
+
 </body>
 
 </html>

@@ -9,12 +9,15 @@
 <body>
     <div>
         <h1>Lets set some goals</h1>
-        <a href="/homepage">Home</a><a href="/logout">Logout</a>
+        <a href="/homepage">Home</a> 
+        <a href="/logout">Logout</a>
     </div>
+    
     <form action="/setgoal" method="POST">
         {% csrf_token %}
         <div class=" form-group">
-            <label for="goal">I wish for</label>
+            {{ goalForm.as_table }}
+            <!-- <label for="goal">I wish for</label>
             <input type="text" name="goal" value="">
             <label for="why">Why is this goal important to you</label>
             <input type="text" name="why" value="">
@@ -23,10 +26,25 @@
             <label for="starttime">Start Date</label>
             <input type="date" name="starttime" id="">
             <label for="target_date">Target Date</label>
-            <input type="date" name="target_date" id="">
-        </div>
-        
+            <input type="date" name="target_date" id=""> -->
         <button class="btn btn-primary">Set Goal</button>
+        </div>
     </form>
+    <div>
+        <h4>Make a list of 3 things that you could to today to reach this goal</h4>
+        <div class="form-group">
+            <p>Daily Task/ Action Plan</p>
+        <label for=""></label>
+        <!-- <input type="checkbox" name="" id=""> -->
+        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+        <small id="helpId" class="form-text text-muted"></small>
+        <button type="submit">Add Tasks</button>
+        </div>
+        <p>repeat this step daily</p>
+    </div>
+
+    <div>
+        <h3>this area is designated for api to generate random inspirational quotes</h3>
+    </div>
 </body>
 </html>
